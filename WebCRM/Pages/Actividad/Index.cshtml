@@ -1,0 +1,84 @@
+﻿@page
+@model WebCRM.Pages.Actividad.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Actividad[0].IdProspecto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actividad[0].IdDetalleCamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actividad[0].FechaHoraProgramada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actividad[0].FechaHoraEjercutada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actividad[0].NotasEjecucion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actividad[0].Calificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actividad[0].IdUsuarioPrograma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actividad[0].IdUsuarioEjecuta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actividad[0].FechaHoraProgramacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Actividad) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProspecto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdDetalleCamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaHoraProgramada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaHoraEjercutada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotasEjecucion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdUsuarioPrograma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdUsuarioEjecuta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaHoraProgramacion)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdActividad">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdActividad">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdActividad">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

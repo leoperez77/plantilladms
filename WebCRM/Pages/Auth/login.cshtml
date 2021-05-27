@@ -1,0 +1,92 @@
+﻿@page
+@model WebCRM.Pages.Auth.LoginModel
+@{
+    ViewData["Title"] = "login";
+    Layout = "_LoginLayout";
+}
+
+<form method="post"  class="form-signin">
+    <input type="hidden" asp-for="ReturnUrl" value="@Model.ReturnUrl" />
+    <div class="card card-login card-hidden">
+        <div class="card-header card-header-info text-center">
+            <h5 class="card-title">
+                <partial name="_CompanyLogoSmall" />
+            </h5>
+            <div class="social-line">
+            </div>
+        </div>
+        <div class="card-body ">
+          
+
+            <span class="bmd-form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="material-icons">commute</i>
+                        </span>
+                    </div>
+                    <input class="form-control" id="username" asp-for="Identificador" placeholder="Cliente" required autofocus />
+                </div>
+            </span>
+            <span class="bmd-form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="material-icons">face</i>
+                        </span>
+                    </div>
+                    <input class="form-control" id="username" asp-for="UserName" placeholder="Nombre de usuario..." required autofocus />
+                </div>
+            </span>
+            <span class="bmd-form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="material-icons">lock_outline</i>
+                        </span>
+                    </div>
+                    <input type="password" class="form-control" asp-for="Password" placeholder="Contraseña..." required />
+                </div>
+            </span>
+            <span class="bmd-form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="material-icons">input</i>
+                        </span>
+                    </div>
+
+                    <input class="form-control" placeholder="Captcha" asp-for="CaptchaCode" autocomplete="off" required />
+                </div>
+            </span>
+
+        </div>
+        <div class="card-footer ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        @if (ModelState.ErrorCount > 0)
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                @Html.ValidationMessage("LoginError")
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <img id="img-captcha" src="~/get-captcha-image" />
+                    </div>
+                </div>
+              
+                <div class="row">
+                    <div class="col-md-12"><button class="btn btn-block" type="submit">Ingresar</button></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"><a href="./recoverpassword" class="btn btn-sm btn-block btn-link btn-github">Recuperar clave</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@if (!String.IsNullOrEmpty( User.Identity.Name))
+{
+    <form method="post" asp-area="Identity" asp-page="/Auth/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
+            </li>
+            <li>                
+                <a asp-page="/Auth/Logout">Logout</a>                
+            </li>
+        </ul>
+    </form>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><a asp-area="" asp-controller="Auth" asp-action="Login">Login</a></li>
+    </ul>
+}

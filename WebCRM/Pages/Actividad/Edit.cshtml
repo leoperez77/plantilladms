@@ -1,0 +1,75 @@
+﻿@page
+@model WebCRM.Pages.Actividad.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Actividad</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Actividad.IdActividad" />
+            <div class="form-group">
+                <label asp-for="Actividad.IdProspecto" class="control-label"></label>
+                <input asp-for="Actividad.IdProspecto" class="form-control" />
+                <span asp-validation-for="Actividad.IdProspecto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actividad.IdDetalleCamp" class="control-label"></label>
+                <input asp-for="Actividad.IdDetalleCamp" class="form-control" />
+                <span asp-validation-for="Actividad.IdDetalleCamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actividad.FechaHoraProgramada" class="control-label"></label>
+                <input asp-for="Actividad.FechaHoraProgramada" class="form-control" />
+                <span asp-validation-for="Actividad.FechaHoraProgramada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actividad.FechaHoraEjercutada" class="control-label"></label>
+                <input asp-for="Actividad.FechaHoraEjercutada" class="form-control" />
+                <span asp-validation-for="Actividad.FechaHoraEjercutada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actividad.NotasEjecucion" class="control-label"></label>
+                <input asp-for="Actividad.NotasEjecucion" class="form-control" />
+                <span asp-validation-for="Actividad.NotasEjecucion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actividad.Calificacion" class="control-label"></label>
+                <input asp-for="Actividad.Calificacion" class="form-control" />
+                <span asp-validation-for="Actividad.Calificacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actividad.IdUsuarioPrograma" class="control-label"></label>
+                <input asp-for="Actividad.IdUsuarioPrograma" class="form-control" />
+                <span asp-validation-for="Actividad.IdUsuarioPrograma" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actividad.IdUsuarioEjecuta" class="control-label"></label>
+                <input asp-for="Actividad.IdUsuarioEjecuta" class="form-control" />
+                <span asp-validation-for="Actividad.IdUsuarioEjecuta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actividad.FechaHoraProgramacion" class="control-label"></label>
+                <input asp-for="Actividad.FechaHoraProgramacion" class="form-control" />
+                <span asp-validation-for="Actividad.FechaHoraProgramacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

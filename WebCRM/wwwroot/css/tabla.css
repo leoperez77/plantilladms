@@ -1,0 +1,65 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap');
+
+
+.table .thead-dark th, .table .thead-dark tr {
+    color: #fff!important;
+    background-color: #343a40;
+    border-color: #454d55;
+}
+
+.table .thead-light th {
+    color: #495057;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.table .thead-dark th, .table .thead-dark tr {
+    color: inherit;
+    border-color: #dee2e6;
+}
+
+.thead-dark a {
+    color: #fff!important;
+    font-weight:bold;
+}
+
+.thead-dark span {
+    color: #ccc!important;
+    font-weight:bold;
+}
+
+th.bg-primary.text-dark, th.bg-info.text-dark, th.bg-warning.text-dark, th.bg-danger.text-dark, th.bg-success.text-dark, th.bg-light.text-dark  {
+    color:black!important;
+}
+
+
+.table, .table thead tr th, .table tbody tr td, .table tfoot tr td  {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:1.1em;
+    line-height:1em;
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-right:.1em;
+    padding-left:.1em;
+}
+
+.table thead tr th {
+    font-weight:bold
+}
+
+.table tbody tr td a {
+    color:#444;
+    font-weight:bold;
+}
+
+.table tbody tr td a:hover, .table tfoot tr td a:hover {
+    text-decoration:underline;
+    color:#bebebe!important;
+}
+
+.ico-table {
+    width:36px;
+    height:auto;
+    display:block;
+    margin:0 auto;
+}

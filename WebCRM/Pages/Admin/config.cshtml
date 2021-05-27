@@ -1,0 +1,324 @@
+﻿@page
+@model WebCRM.configModel
+@{
+    ViewData["Title"] = "Configuración";
+}
+
+<div class="card">
+    <div class="card-header card-header-icon card-header-rose">
+        <div class="card-icon">
+            <i class="material-icons">build</i>
+        </div>
+        <h4 class="card-title "> @ViewData["Title"]</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card-body ">
+                <div class="table-responsive">
+                    <table class="table table-condensed">
+                        <thead class="">
+                            <tr>
+                                <th class="text-dark text-left">
+                                    <b>Maestros generales</b>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/act/index">Actividades comerciales</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/clase/index">Clase seguimiento</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/param/download/index">Downloads</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/param/empresa/index">Empresa</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/links/index">Enlaces</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/status/index">Estados asesor</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/forms/index">Formularios</a>
+                                </td>
+
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/genero/index">Géneros</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/motivocontacto/index">Motivos de contacto</a>
+                                </td>
+
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/origen/index">Origen del contacto</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/perfil/index">Perfiles tributarios</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/motivodesistimiento/index">Razones de desistimiento</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/resultado/index">Resultados seguimiento</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/sede/index">Sedes</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/tipoactividad/index">Tipos de actividad</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/config/tipodocumento/index">Tipos de documento</a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-body ">
+                <div class="table-responsive">
+                    <table class="table table-condensed">
+                        <thead class="">
+                            <tr>
+                                <th class="text-dark text-left">
+                                    <b>Créditos</b>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text text-left">
+                                    <a class="page-link" href="/admin/config/creditos/financieras/index">Financieras</a>
+
+                                </td>
+
+
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" href="/admin/config/creditos/conceptos/index">Conceptos</a>
+                                </td>
+
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" href="/admin/config/creditos/TipoActivos/index/">Tipos de activos</a>
+                                </td>
+
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" href="/admin/config/creditos/TipoProductos/index/">Tipos de producto</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" href="/admin/config/creditos/tipocontratos/index">Tipo de contrato</a>
+                                </td>
+
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" href="/admin/config/creditos/procesoscredito/index">Procesos</a>
+                                </td>
+
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" href="/admin/config/creditos/estadoscredito/index">Estados</a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-condensed">
+                        <thead class="">
+                            <tr>
+                                <th class="text-dark text-left">
+                                    <b>Parámetros comerciales</b>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text text-left">
+                                    <a class="page-link" href="/presupuesto/index">Presupuesto</a>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    
+                        <table class="table table-condensed">
+                            <thead class="">
+                                <tr>
+                                    <th class="text-dark text-left">
+                                        <b>Gestión de prospectos</b>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text text-left">
+                                        <a class="page-link" href="/admin/config/resultadocontacto/index">Resultado contacto</a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td class="text text-left">
+                                        <a class="page-link" href="/admin/config/tipogestion/index">Tipos de gestión</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-body ">
+                <div class="table-responsive">
+                    <table class="table table-condensed">
+                        <thead class="">
+                            <tr>
+                                <th class="text-dark text-left">
+                                    <b>Utilidades</b>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/syncstatus/index">Estado sincronización</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/util/upload">Uploads</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/param/index">Parámetros</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/consultas/index">Consultas</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <table class="table table-condensed">
+                        <thead class="">
+                            <tr>
+                                <th class="text-dark text-left">
+                                    <b>Vehículos</b>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/veh/accesorios/index">Accesorios</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/veh/marca/index">Marcas</a>
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td class="text text-left">
+                                    <a class="page-link" asp-page="/admin/veh/democars/index">Vehículos de prueba</a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <br />
+                    @if (this.User.IsInRole("W"))
+                    {
+                        <table class="table table-condensed">
+                            <thead class="">
+                                <tr>
+                                    <th class="text-dark text-left">
+                                        <b>Seguridad</b>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                             
+                                    <tr class="">
+                                        <td class="text text-left">
+                                            <a class="page-link" asp-page="/admin/distribuidores/index">Distribuidores</a>
+                                        </td>
+                                    </tr>
+                                
+                                <tr>
+                                    <td class="text text-left">
+                                        <a class="page-link" asp-page="/admin/seg/grupo/index">Grupos</a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td class="text text-left">
+                                        <a class="page-link" asp-page="/admin/seg/usuarios/index">Usuarios</a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

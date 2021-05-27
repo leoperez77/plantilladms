@@ -1,0 +1,122 @@
+.tim-row {
+  margin-bottom: 20px;
+}
+
+.tim-white-buttons {
+  background-color: #777777;
+}
+
+.typography-line {
+  padding-left: 25%;
+  margin-bottom: 35px;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.typography-line span {
+  bottom: 10px;
+  color: #c0c1c2;
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13px;
+  left: 0;
+  position: absolute;
+  width: 260px;
+  text-transform: none;
+}
+
+.tim-row {
+  padding-top: 60px;
+}
+
+.tim-row h3 {
+  margin-top: 0;
+}
+
+.tim-typo {
+  padding-left: 25%;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.tim-typo .tim-note {
+  bottom: 5px;
+  color: #c0c1c2;
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  left: 0;
+  margin-left: 20px;
+  position: absolute;
+  width: 260px;
+}
+
+.td-actions {
+    white-space:nowrap!important;
+}
+
+.pcr-button, div.pickr button {
+    display: block;
+    width: 100%;
+}
+
+
+.card .card-header.card-header-image img {
+    width: auto!important;
+    border-radius: 6px;
+    pointer-events: none;
+    box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    display: block!important;
+    margin: 0 auto!important;
+    max-width: 250px!important;
+}
+
+@media (max-width: 1100px) {
+    .card .card-header.card-header-image img {
+        max-width: 150px!important;
+    }
+}
+
+.table2 td {
+    border:0 none!important;
+    padding:.2em!important;
+    width:33%;
+}
+
+.table001 * {
+    font-size:11pt!important;
+}
+
+.nav-application>.btn {
+    width: 113px !important;
+    height: 113px !important;
+    float: left;
+    background: transparent;
+    color: #8492a6;
+    margin: 0 0 24px
+}
+
+.nav-application>.btn:nth-child(odd) {
+    margin-right: 24px
+}
+
+.nav-application>.btn.active {
+    background-color: #6e00ff;
+    color: #fff;
+    -webkit-box-shadow: 0 1rem 3rem rgba(31, 45, 61, .125) !important;
+    box-shadow: 0 1rem 3rem rgba(31, 45, 61, .125) !important
+}
+
+.nav-application>.btn:hover:not(.active) {
+    color: #6e00ff;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
+}
+
+.custom-pills li {
+    margin:.5em;
+}

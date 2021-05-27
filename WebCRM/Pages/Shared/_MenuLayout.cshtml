@@ -1,0 +1,221 @@
+﻿
+@{
+    bool Corporativo = false;
+}
+@functions{
+
+    string IsSelected(string option)
+    {
+        if (@Context.Request.Path.Value.ToLower() == option | @Context.Request.Path.Value.ToLower().IndexOf(option) >= 0)
+            return "active";
+        else
+            return "";
+    }
+
+    string MustShow(string option)
+    {
+        if (@Context.Request.Path.Value.ToLower().IndexOf(option) >= 0)
+            return "show";
+        else
+            return "";
+    }
+}
+
+
+
+<li class="nav-item level-one">
+    <a class="nav-link" data-toggle="collapse" href="#dbLinks">
+        <i class="material-icons">dashboard</i>
+        <p>
+            Dashboards
+            <b class="caret"></b>
+        </p>
+    </a>
+    <div class="collapse  @MustShow("/db")" id="dbLinks">
+        <ul class="nav n2">
+            <li class="nav-item level-two @IsSelected("/db/tiempos")">
+                <a class="nav-link" asp-page="/db/tiempos">
+                    <span class="sidebar-mini">D</span>
+                    <span class="sidebar-normal">Desempeño</span>
+                </a>
+            </li>
+            <li class="nav-item level-two @IsSelected("/db/main")">
+                <a class="nav-link" asp-page="/db/main">
+                    <span class="sidebar-mini"> GN</span>
+                    <span class="sidebar-normal"> General</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</li>
+
+
+
+<li class="nav-item">
+    <a class="nav-link" asp-page="/admin/config">
+        <i class="material-icons">build</i>
+        <p>Configuración</p>
+    </a>
+</li>
+
+
+
+<li class="nav-item level-one">
+    <a class="nav-link" data-toggle="collapse" href="#formsExamples">
+        <i class="material-icons">ballot</i>
+        <p>
+            Campañas
+            <b class="caret"></b>
+        </p>
+    </a>
+    <div class="collapse @MustShow("/camps")" id="formsExamples">
+        <ul class="nav n2">
+            <li class="nav-item level-two @IsSelected("/camps")">
+                <a class="nav-link" asp-page="/camps/index">
+                    <span class="sidebar-mini"> CM</span>
+                    <span class="sidebar-normal"> Administrar</span>
+                </a>
+            </li>
+            <li class="nav-item level-two @IsSelected("/camps/create")">
+                <a class="nav-link" asp-page="/camps/create">
+                    <span class="sidebar-mini"> C</span>
+                    <span class="sidebar-normal"> Crear</span>
+                </a>
+            </li>
+            <li class="nav-item level-two @IsSelected("/camps/leads")">
+                <a class="nav-link" asp-page="/camps/leads">
+                    <span class="sidebar-mini"> I</span>
+                    <span class="sidebar-normal">Importar leads</span>
+                </a>
+            </li>
+            <li class="nav-item level-two @IsSelected("/camps/stats")">
+                <a class="nav-link" asp-page="/stats/index">
+                    <span class="sidebar-mini"> ST</span>
+                    <span class="sidebar-normal"> Estadísticas</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</li>
+
+
+
+
+
+<li class="nav-item level-one @IsSelected("/informes/")">
+    <a class="nav-link" data-toggle="collapse" href="#informes">
+        <i class="material-icons">show_chart</i>
+        <p>
+            Análisis
+            <b class="caret"></b>
+        </p>
+    </a>
+    <div class="collapse @MustShow("/informes")" id="informes">
+        <ul class="nav n2">
+            @*<li class="nav-item level-two  @IsSelected("/informes/stats")">
+                    <a class="nav-link" asp-page="/Stats/index">
+                        <span class="sidebar-mini">I</span>
+                        <span class="sidebar-normal">Indicadores</span>
+                    </a>
+                </li>*@
+
+            @*<li class="nav-item level-two @IsSelected("/informes/disp")">
+                    <a class="nav-link" asp-page="/informes/disp">
+                        <span class="sidebar-mini"> D</span>
+                        <span class="sidebar-normal"> Disponibilidad</span>
+                    </a>
+                </li>*@
+
+
+            @*<li class="nav-item level-one  @IsSelected("/stats")">
+                    <a class="nav-link" asp-page="/stats/index">
+                        <i class="material-icons">timeline</i>
+                        <p> Estadística</p>
+                    </a>
+                </li>*@
+            <li class="nav-item level-two @IsSelected("/informes")">
+                <a class="nav-link" asp-page="/informes/index">
+                    <span class="sidebar-mini"> R</span>
+                    <span class="sidebar-normal"> Reportes</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item level-two @IsSelected("/consultas")">
+                <a class="nav-link" asp-page="/consultas/index">
+                    <span class="sidebar-mini"> C</span>
+                    <span class="sidebar-normal"> Consultas</span>
+                </a>
+            </li>
+            @*@if (this.User.IsInRole("W"))
+                {
+                    <li class="nav-item level-two @IsSelected("/informes/viewer")">
+                        <a class="nav-link" asp-page="/reports/index">
+                            <span class="sidebar-mini"> L</span>
+                            <span class="sidebar-normal"> Listado</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item level-two @IsSelected("/informes/designer")">
+                        <a class="nav-link" href="/home/designer">
+                            <span class="sidebar-mini"> RD</span>
+                            <span class="sidebar-normal"> Diseñador</span>
+                        </a>
+                    </li>
+                }*@
+
+        </ul>
+    </div>
+</li>
+
+
+<li class="nav-item level-one">
+    <a class="nav-link" data-toggle="collapse" href="#prospectos">
+        <i class="material-icons">face</i>
+        <p>
+            Prospectos
+            <b class="caret"></b>
+        </p>
+    </a>
+    <div class="collapse @MustShow("/prospectos")" id="prospectos">
+        <ul class="nav n2">
+            <li class="nav-item level-two  @IsSelected("/prospectos/buscar")">
+                <a class="nav-link" asp-page="/prospectos/buscar">
+                    <span class="sidebar-mini">B</span>
+                    <span class="sidebar-normal">Búsqueda</span>
+                </a>
+            </li>
+            <li class="nav-item level-two  @IsSelected("/prospectos/create")">
+                <a class="nav-link" asp-page="/prospectos/create">
+                    <span class="sidebar-mini"> C</span>
+                    <span class="sidebar-normal"> Crear</span>
+                </a>
+            </li>
+            <li class="nav-item level-two @IsSelected("/prospectos")">
+                <a class="nav-link" asp-page="/prospectos/index">
+                    <span class="sidebar-mini"> M</span>
+                    <span class="sidebar-normal">Mis Clientes</span>
+                </a>
+            </li>
+
+            <li class="nav-item level-two @IsSelected("/prospectos/assign")">
+                <a class="nav-link" asp-page="/prospectos/assign">
+                    <span class="sidebar-mini"> R</span>
+                    <span class="sidebar-normal">Repartir</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</li>
+
+
+
+<li class="nav-item">
+    <a class="nav-link" asp-page="/auth/logout">
+        <i class="material-icons">exit_to_app</i>
+        <p> Salir</p>
+    </a>
+</li>
+
