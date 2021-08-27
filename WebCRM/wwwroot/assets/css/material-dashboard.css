@@ -29298,3 +29298,33 @@ select.selectpicker {
   }
 }
 
+/*New design*/
+.blue-btn{
+    background: #147ced;
+    color: white;
+}
+
+.blue-btn:hover{
+    background: #147ced;
+    color: white;
+}
+
+.login-titles{
+    text-align: center;
+    font-weight: bolder;
+    margin-left: 25px;
+}
+
+.logo-sign{
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.logo-sign img{
+    width: 100%;
+}
+
+.form-control, .is-focused .form-control,
+.form-control:invalid {
+    background-image: linear-gradient(to top, #147ced 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+}
