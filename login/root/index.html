@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,500;0,700;1,400&family=Nunito:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <img class="logoDms" src="img/logoDMS.svg" alt="Logo DMS.svg">
+    <div class="contenedor">
+        <form method="post" class="form-singin">
+            <div class="empresa">
+                <img class="iconCar" src="img/iconCar.svg" alt="Car.svg">
+                <input class="form-control" id="company" placeholder="Empresa" required="" autofocus="" type="text"
+                    data-val="true" data-val-required="The Empresa field is required." name="Identificador" value="">
+            </div>
+            <div class="user">
+                <img class="iconUser" src="img/iconUser.svg" alt="User.svg">
+                <input class="form-control" id="username" placeholder="Nombre de usuario..." required="" autofocus=""
+                    type="text" data-val="true" data-val-required="The UserName field is required." name="UserName"
+                    value="">
+            </div>
+            <div class="loginLock">
+                <img class="iconLock" src="img/iconLock.svg" alt="Candado.svg">
+                <input type="password" class="form-control" placeholder="Contraseña..." required="" data-val="true"
+                    data-val-required="The Password field is required." id="Password" name="Password">
+            </div>
+            <button class="btnbtn-block" type="submit">Ingresar</button>
+            <a href="./recoverpassword" class="btn btn-sm btn-block btn-link btn-github" id="recover">¿olvidaste tu
+                contraseña?</a>
+        </form>
+    </div>
+    <div class="copyrightfloat-right">
+        ©
+        <script>document.write(new Date().getFullYear())</script>, made with <i class="material-icons">favorite</i>
+        by
+        <a href="#" target="_blank">DMS</a>
+    </div>
+
+
+</body>
+
+</html>

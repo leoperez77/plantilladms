@@ -1,0 +1,86 @@
+*{
+    font-family: 'Nunito', sans-serif;
+}
+.logoDms{
+    position: absolute;
+    width: 10%;
+    left: 58%;
+    top: 5%;
+}
+.contenedor{
+    background-image:url(img/cars.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 700px;
+}
+.form-singin{
+    width: 30%;
+    height: 1080px;
+    background-color: #ffffff;
+    display: block;
+    float: right;
+}
+.iconCar{
+    position: relative;
+    z-index: 4;
+    height:4em;
+    margin-left: 15%;
+}
+.empresa{
+    display:flex;
+    padding-top: 30%;
+}
+#company, #username, .form-control{
+    background-color: #1B2F4A;
+    color: #ffffff;
+    position: relative;
+    margin-left: -2em;
+    z-index: 2;
+    width: 300px;
+}
+#company::placeholder, #username::placeholder, .form-control::placeholder { 
+    color: #ffffff;
+    padding-left: 2em;
+    font-size: 1.3em;
+}
+.user, .loginLock{
+    display: flex;
+    margin-top: 1.5em;
+    margin-left: 15%;
+}
+.iconUser{
+    position: relative;
+    z-index: 6;
+    height:4em;
+}
+.iconLock{
+    position: relative;
+    z-index: 7;
+    height:4em;
+}
+.btnbtn-block{
+    background-color: #2575BB;
+    width: 60%;
+    height: 5%;
+    border-radius: 12px;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+#recover{
+    display: block;
+    color: #2575BB;
+    text-align: center;
+    margin-top: 10px;
+
+}
+.copyrightfloat-right{
+right: 0px;
+margin-right: 20px;
+position: absolute;
+margin-top: -30px;
+color: #2575BB;
+
+}
